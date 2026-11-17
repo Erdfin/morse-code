@@ -1,0 +1,22 @@
+[package]
+name = "morse-trainer"
+version = "0.1.0"
+edition = "2021"
+description = "Desktop Morse code practice app: key Morse and see it decoded, or hear Morse and copy it down."
+license = "MIT"
+
+[lib]
+name = "morse_trainer"
+path = "src/lib.rs"
+
+[[bin]]
+name = "morse-trainer"
+path = "src/main.rs"
+
+[dependencies]
+eframe = "0.32"
+cpal = "0.15"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
